@@ -15,12 +15,14 @@
 
 1. 阅读[流程与能力边界](docs/workflow.md)和[能力边界说明](docs/capability-boundary.md)。
 2. 从[Coordinator 任务卡](docs/templates/coordinator.md)开始，明确需求、范围、保护边界和验收标准。
-3. 按[中文用户手册](用户手册.md)完成 Worker、QA、Reviewer 和人工审批交接。
+3. 按任务类型和[中文用户手册](用户手册.md)选择执行、独立核验与人工决定环节。
 4. 根据实际 Orca/Codex 环境填写本机配置；公开仓库只保留[配置示例](examples/config.example.env)。示例中的 `APPROVAL_REQUIRED=true` 只是配置占位值，不是本仓库已实现的权限强制机制。
 
 ## 核心角色
 
-Coordinator 负责拆解需求和组织交接；Worker 在隔离工作区完成分配的修改；QA 从冻结候选执行适用验证；Reviewer 独立检查差异和证据；Human Approval 决定是否合并。
+按需使用 Coordinator、架构顾问、实现 Worker、资料研究 Worker、QA 和 Reviewer 六类逻辑岗位；职责、输入、交付与修改边界统一见[流程说明](docs/workflow.md#角色职责)。它们不要求常驻或全部启用，人工决定是否批准、合并或发布。
+
+用户只在 ChatGPT App 提目标并接收结果是目标使用方式；App 直控 Orca 与结果自动回传尚未验证，不能由本仓库文档推断为已实现。
 
 ## 内容
 
